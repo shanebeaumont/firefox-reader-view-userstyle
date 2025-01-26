@@ -1,0 +1,37 @@
+@-moz-document url-prefix("about:reader") {
+    body {
+        --main-background: var(--background-colour) !important;
+        --main-foreground: var(--foreground-colour) !important;
+        --content-width: 640px !important;
+        --selected-background: var(--background-colour-selection) !important;
+        --link-foreground: var(--blue-colour) !important;
+        --link-selected-foreground: var(--link-foreground) !important;
+        --visited-link-foreground: var(--purple-colour) !important;
+
+        padding: 0 !important;
+    }
+
+    a {
+        text-decoration: none !important;
+
+        &:hover {
+            text-decoration: underline !important;
+        }
+    }
+
+    #toolbar {
+        display: none !important;
+    }
+
+    .container {
+        --line-height: normal !important;
+
+        font-size: 16px !important;
+    }
+
+    @media (max-width: 800px) {
+        .container {
+            margin: 0 10vw !important;
+        }
+    }
+}
